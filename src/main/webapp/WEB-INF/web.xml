@@ -7,7 +7,7 @@
 
     <servlet>
         <servlet-name>User</servlet-name>
-        <servlet-class>com.oktenweb.UserServlet</servlet-class>
+        <servlet-class>lesson7.UserServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>

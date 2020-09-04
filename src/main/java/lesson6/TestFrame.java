@@ -1,4 +1,4 @@
-package lecture1;
+package lesson6;
 
 import java.awt.Dimension;
 import java.util.ArrayList;

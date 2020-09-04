@@ -1,4 +1,4 @@
-package com.oktenweb;
+package lesson7;
 
 public class User {
     private int id;

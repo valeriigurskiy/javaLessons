@@ -1,4 +1,4 @@
-package com.oktenweb;
+package lesson7;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

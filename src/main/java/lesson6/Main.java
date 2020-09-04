@@ -1,4 +1,4 @@
-package lecture1;
+package lesson6;
 
 import java.sql.*;
 import java.util.ArrayList;
