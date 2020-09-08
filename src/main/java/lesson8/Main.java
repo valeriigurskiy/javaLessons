@@ -29,26 +29,26 @@ public class Main {
 
         File file = new File("1.txt");
 //        try (FileOutputStream fileOutputStream = new FileOutputStream(file, true)){
-//        try (FileOutputStream fileOutputStream = new FileOutputStream(file)){
-//            fileOutputStream.write("Hello".getBytes());
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        try (FileOutputStream fileOutputStream = new FileOutputStream(file)){
+            fileOutputStream.write("Hello".getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-//        try(FileInputStream fileInputStream = new FileInputStream(file)){
-////            System.out.println((char)(fileInputStream.read()));
-//            int i = 0;
-//            String result = "";
-//            while((i = fileInputStream.read()) != -1){
-////                System.out.println((char)i);
-//                result += (char)i;
-//            }
-//            System.out.println(result);
-//        } catch (FileNotFoundException e){
-//            e.printStackTrace();
-//        } catch (IOException e){
-//            e.printStackTrace();
-//        }
+        try(FileInputStream fileInputStream = new FileInputStream(file)){
+//            System.out.println((char)(fileInputStream.read()));
+            int i = 0;
+            String result = "";
+            while((i = fileInputStream.read()) != -1){
+//                System.out.println((char)i);
+                result += (char)i;
+            }
+            System.out.println(result);
+        } catch (FileNotFoundException e){
+            e.printStackTrace();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
 
 //        try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file))){
 //            bufferedWriter.write("Hello World \nHello Universe");
@@ -67,28 +67,28 @@ public class Main {
 //            e.printStackTrace();
 //        }
 
-        try{
-            URL url = new URL("https://jsonplaceholder.typicode.com/users");
-            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-            int responseCode = urlConnection.getResponseCode();
-            StringBuilder stringBuilder = new StringBuilder();
-            if(responseCode == HttpURLConnection.HTTP_OK){
-                InputStream inputStream = urlConnection.getInputStream();
-                int i = 0;
-                while ((i = inputStream.read()) != -1) {
-                    stringBuilder.append((char)i);
-                }
-
-                System.out.println(stringBuilder);
-
-            }
-
-
-        } catch (MalformedURLException e){
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try{
+//            URL url = new URL("https://jsonplaceholder.typicode.com/users");
+//            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+//            int responseCode = urlConnection.getResponseCode();
+//            StringBuilder stringBuilder = new StringBuilder();
+//            if(responseCode == HttpURLConnection.HTTP_OK){
+//                InputStream inputStream = urlConnection.getInputStream();
+//                int i = 0;
+//                while ((i = inputStream.read()) != -1) {
+//                    stringBuilder.append((char)i);
+//                }
+//
+//                System.out.println(stringBuilder);
+//
+//            }
+//
+//
+//        } catch (MalformedURLException e){
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
 
     }
